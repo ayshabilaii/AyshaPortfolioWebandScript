@@ -1,0 +1,169 @@
+/* Basic reset for all pages */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: whitesmoke;
+    color: black;
+}
+
+/* Home Page */
+#home-page {
+    text-align: center;
+}
+
+#home-page main {
+    margin-top: 50px;
+}
+
+#home-page h1 {
+    font-size: 36px;
+}
+
+#home-page p {
+    font-size: 18px;
+}
+
+/* Header and Navigation Styling */
+header {
+    background-color: rgb(245, 219, 223);
+    padding: 20px 0;
+    overflow: hidden; /* Clear floats in header */
+}
+
+.nav-list {
+    list-style-type: none; /* Removes bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: rgb(252, 0, 29);
+}
+
+/* Footer styling for all pages */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(247, 194, 202);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Contact Page */
+#contact-page {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(245, 219, 223);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#contact-page #wrapper {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 4px 8px rgba(250, 1, 221, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+#contact-page h1, #contact-page h3 {
+    text-align: center;
+    color: #333;
+}
+
+#contact-page form {
+    margin-top: 20px;
+}
+
+#contact-page p {
+    margin-bottom: 15px;
+}
+
+#contact-page input[type="text"],
+#contact-page input[type="email"],
+#contact-page textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#contact-page input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Circular Buttons */
+#contact-page input[type="submit"],
+#contact-page input[type="reset"] {
+    font-family: 'Courier New', Courier, monospace;
+    width: 150px; /* Diameter of the circle */
+    height: 150px; /* Diameter of the circle */
+    border: none;
+    border-radius: 50%; /* Makes the button circular */
+    cursor: pointer;
+    font-size: 16px; /* Adjust text size */
+    text-align: center;
+    line-height: 150px; /* Centers text vertically inside the circle */
+    margin-right: 40px; /* Space between buttons */
+    display: inline-block; /* Ensure buttons are displayed side by side */
+    box-shadow: 10px 10px 5px rgba(132, 132, 132, 0.7);
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Submit and Reset button specific colors */
+#contact-page input[type="submit"] {
+    background-color: #baffca; /* Submit button color */
+}
+
+#contact-page input[type="reset"] {
+    background-color: #faa2ab; /* Reset button color */
+}
+
+/* Hover effects for both buttons */
+#contact-page input[type="submit"]:hover,
+#contact-page input[type="reset"]:hover {
+    opacity: 0.8; /* Slightly reduce opacity on hover */
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.2), 5px 5px 10px rgba(0, 0, 0, 0.2); /* Inverted shadow effect */
+}
+
+/* Button container to ensure buttons are aligned side by side */
+#contact-page .button-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center;
+}
+
+/* Media query to adjust button size for smaller screens */
+@media (max-width: 600px) {
+    #contact-page input[type="submit"],
+    #contact-page input[type="reset"] {
+        width: 100px; /* Smaller size for smaller screens */
+        height: 100px;
+        line-height: 100px; /* Center text inside smaller circle */
+        margin-right: 10px;
+    }
+}
