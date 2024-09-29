@@ -11,7 +11,7 @@
 
             <h1>Take a look at my introduction video!</h1>
 
-            <video width="360" height="220" controls poster="on_record.png" preload="auto" autoplay loop muted id = "myvid">
+            <video width="700" height="595" controls poster="on_record.png" preload="auto" autoplay loop muted id = "myvid">
                 <source src="on_record.mp4" type="video/mp4">
                 <source src="on_record.ogv" type="video/ogg">
             </video>
@@ -30,23 +30,26 @@
             </script>
 
             <style>
-                button
-                {
-                    background-color: black;
-                    color: white;
-                    height: 50px;
-                    border: 2px whitesmoke;
-                    box-shadow: 10px 10px 5px black;
-                    border-radius: 5px;                
+                button {
+                    background-color: rgb(255, 255, 255);
+                    color: rgb(89, 185, 246);
+                    height: 150px; /* Set the height */
+                    width: 150px; /* Set the width */
+                    border: 2px solid whitesmoke;
+                    box-shadow: 8px 8px 5px rgb(172, 171, 171);
+                    border-radius: 50%; /* Make the button circular */
+                    transition: all 0.3s ease; /* Smooth transition for hover effect */
                 }
-                button:hover
-                {
-                    background-color: beige;
-                    color: black;
-                    height: 50px;
-                    border: 2px whitesmoke;
-                    box-shadow: -10px -10px 5px black;
-                    border-radius: 5px; 
+                
+                button:hover {
+                    background-color: rgb(255, 255, 255);
+                    color: rgb(107, 182, 248);
+                    height: 150px; /* Keep height and width equal */
+                    width: 150px;
+                    border: 2px solid whitesmoke;
+                    box-shadow: -8px -8px 5px rgb(170, 169, 169);
+                    border-radius: 50%; /* Maintain circular shape on hover */
+                    transition: all 0.3s ease; /* Smooth transition for hover effect */
                 }
             </style>
 
