@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Courier New', Courier, monospace;
-    background: linear-gradient(to right, #f893ab, #9ed5e9); /* linear gradient */
+    background: linear-gradient(to right, #f7849f, #94ddf8); /* linear gradient */
     color: black;
 }
 
@@ -28,41 +28,12 @@ body {
     font-size: 18px;
 }
 
-/* Header and Navigation Styling */
-header {
-    background-color: rgb(255, 255, 255);
-    padding: 20px 20px; /* Padding inside the header */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center content horizontally */
-}
-
-/* Flex container to align the image and navigation */
-.header-container {
-    display: flex;
-    justify-content: space-between; /* Space between logo and nav */
-    align-items: center;
-    width: 100%;
-    max-width: 1200px; /* Limit the width of the container */
-    margin: 0 auto;
-}
-
-/* Styling for the logo or small image */
-.logo {
-    width: 60px;
-    height: 60px;
-    margin-right: 20px; /* Space between image and navigation */
-}
-
-/*text and image on main page*/
 /* Container for text and image */
 .intro-section {
     display: flex; /* Use flexbox to align elements side by side */
     justify-content: space-between; /* Space between text and image */
     align-items: center; /* Vertically align content */
     padding: 50px; /* Add some padding around the section */
-    border-radius: 10px; /* Optional: Add rounded corners */
-    border-radius: 10px; /* Optional: Add rounded corners */
 }
 
 /* Text content styling */
@@ -91,8 +62,30 @@ header {
 .profile-image {
     max-width: 100%; /* Scale image to fit within its container */
     height: auto;
-    border-radius: 50%; /* Optional: Make image circular */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow */
+    box-shadow: 10px 7px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header and Navigation Styling */
+header {
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Flex container to align the image and navigation */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Styling for the logo image */
+.logo {
+    width: 50px; /* Adjust the width */
+    height: 50px; /* Adjust the height */
+    margin-right: 20px; /* Space between image and navigation */
 }
 
 /* Navigation list styling */
@@ -118,10 +111,10 @@ header {
 }
 
 .nav-list li a:hover {
-    color: #79d2f2;
+    color: #9ed5e9;
 }
 
-/* Footer styling for all pages */
+/* Footer styling */
 footer {
     text-align: center;
     padding: 15px;
@@ -131,11 +124,20 @@ footer {
     bottom: 0;
 }
 
+/*About me page*/
+/* Container for video and button */
+.video-button-container {
+    display: flex; /* Display items side by side */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between video and button */
+}
+
 /* Contact Page */
 #contact-page {
     font-family: 'Courier New', Courier, monospace;
     display: flex;
-    background: linear-gradient(135deg, #f893ab, #9ed5e9); /* angled gradient */
+    background: linear-gradient(135deg, #f7849f, #94ddf8); /* angled gradient */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -181,11 +183,11 @@ footer {
 #contact-page input[type="reset"] {
     font-family: 'Courier New', Courier, monospace;
     width: 150px; /* Diameter of the circle */
-    height: 150px; 
+    height: 150px; /* Diameter of the circle */
     border: none;
     border-radius: 50%; /* Makes the button circular */
     cursor: pointer;
-    font-size: 16px;
+    font-size: 16px; /* Adjust text size */
     text-align: center;
     line-height: 150px; /* Centers text vertically inside the circle */
     margin-right: 40px; /* Space between buttons */
@@ -216,10 +218,6 @@ footer {
     justify-content: center; /* Center buttons horizontally */
     align-items: center;
 }
-
-/*project section*/
-
-
 
 /* Media query to adjust button size for smaller screens */
 @media (max-width: 600px) {

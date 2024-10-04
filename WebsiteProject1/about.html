@@ -1,61 +1,86 @@
+<!DOCTYPE html>
 <html>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>About me</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" href="./css/mdForDesktop.css" media="screen and (min-width: 1024px)" />
-        <link rel="stylesheet" href="./css/mdForSmall.css" media="screen and (max-width: 768px)" />
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="./css/mdForDesktop.css" media="screen and (min-width: 1024px)" />
+    <link rel="stylesheet" href="./css/mdForSmall.css" media="screen and (max-width: 768px)" />
+</head>
 
-    <body>
-        <div id="wrapper">
+<body>
+    <div id="wrapper" style="display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column;">
 
-            <h1>Take a look at my introduction video!</h1>
+        <h1 style="margin-bottom: 30px;">Take a look at my introduction video!</h1>
 
-            <video width="700" height="595" controls poster="on_record.png" preload="auto" autoplay loop muted id = "myvid">
-                <source src="on_record.mp4" type="video/mp4">
-                <source src="on_record.ogv" type="video/ogg">
+        <!-- Container for video and button -->
+        <div class="video-button-container">
+            <!-- Video element -->
+            <video width="500" height="375" controls poster="on_record.png" preload="auto" id="myvid">
+                <source src="introvid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
             </video>
 
-            <button onclick="PlayPause()">Play/Pause Button </button>
-
-            <script>
-                var mybtn=document.getElementById("myvid");
-                function PlayPause()
-                {
-                    if(mybtn.paused)
-                        mybtn.play();
-                    else
-                        mybtn.pause();
-                }
-            </script>
-
-            <style>
-                button {
-                    background-color: rgb(255, 255, 255);
-                    color: rgb(89, 185, 246);
-                    height: 150px; /* Set the height */
-                    width: 150px; /* Set the width */
-                    border: 2px solid whitesmoke;
-                    box-shadow: 8px 8px 5px rgb(172, 171, 171);
-                    border-radius: 50%; /* Make the button circular */
-                    transition: all 0.3s ease; /* Smooth transition for hover effect */
-                }
-                
-                button:hover {
-                    background-color: rgb(255, 255, 255);
-                    color: rgb(107, 182, 248);
-                    height: 150px;
-                    width: 150px;
-                    border: 2px solid whitesmoke;
-                    box-shadow: -8px -8px 5px rgb(170, 169, 169);
-                    border-radius: 50%; /* Maintain circular shape on hover */
-                    transition: all 0.3s ease;
-                }
-            </style>
-
+            <!-- Custom Play/Pause Button -->
+            <button onclick="PlayPause()" aria-label="Play or Pause the Video" class="play-pause-btn">Play/Pause</button>
         </div>
-    </body>
+
+        <!-- JavaScript to handle play and pause -->
+        <script>
+            function PlayPause() {
+                var myvid = document.getElementById("myvid"); // Correctly reference the video element
+                if (myvid.paused) {
+                    myvid.play();
+                } else {
+                    myvid.pause();
+                }
+            }
+        </script>
+
+        <style>
+            /* Button styling */
+            .play-pause-btn {
+                background-color: #ffffff;
+                color: #59b9f6;
+                height: 150px; /* Set the height */
+                width: 150px; /* Set the width */
+                border: 2px solid whitesmoke;
+                box-shadow: 8px 8px 5px rgb(172, 171, 171);
+                border-radius: 50%; /* Make the button circular */
+                cursor: pointer;
+                font-size: 16px;
+                transition: all 0.3s ease; /* Smooth transition for hover effect */
+                outline: none;
+            }
+
+            .play-pause-btn:hover {
+                background-color: #ffffff;
+                color: #6bb6f8;
+                box-shadow: -8px -8px 5px rgb(170, 169, 169);
+            }
+
+            /* Responsive styling */
+            @media (max-width: 768px) {
+                .video-button-container {
+                    flex-direction: column; /* Stack video and button vertically on small screens */
+                }
+
+                .play-pause-btn {
+                    width: 100px; /* Adjust button size for smaller screens */
+                    height: 100px;
+                    font-size: 14px;
+                }
+
+                video {
+                    width: 100%; /* Make video responsive */
+                    height: auto;
+                }
+            }
+        </style>
+    </div>
+
+</body>
 
 </html>
