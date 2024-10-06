@@ -34,7 +34,7 @@
 
         <!-- Container for video and button -->
         <div class="video-button-container">
-            <!-- Video element -->
+    
             <video width="500" height="375" controls poster="on_record.png" preload="auto" id="myvid">
                 <source src="introvid.mp4" type="video/mp4">
             </video>
@@ -43,10 +43,9 @@
             <button onclick="PlayPause()" aria-label="Play or Pause the Video" class="play-pause-btn">Play/Pause</button>
         </div>
 
-        <!-- JavaScript to handle play and pause -->
         <script>
             function PlayPause() {
-                var myvid = document.getElementById("myvid"); // Correctly reference the video element
+                var myvid = document.getElementById("myvid");
                 if (myvid.paused) {
                     myvid.play();
                 } else {
