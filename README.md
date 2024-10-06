@@ -1,6 +1,8 @@
 # Aysha Bilai's Portfolio Website
 
 This is my personal portfolio site created as part of the **INFR3120 – Web and Scripting Programming** course.
+file:///C:/web%20development%20class/WebandScriptProgramming/WebsiteProject1/main.html
+
 ## Project Structure
 
 - **Home Page**: Introductory content and navigation to other pages.
